@@ -1,0 +1,290 @@
+{
+  "decks": [
+    {
+      "id": 1,
+      "name": "Rendering in React",
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
+    },
+    {
+      "name": "React Router",
+      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
+      "id": 2
+    },
+    {
+      "name": "b",
+      "description": "b",
+      "id": 3
+    },
+    {
+      "name": "aa",
+      "description": "aa",
+      "id": 4
+    },
+    {
+      "name": "c",
+      "description": "c",
+      "id": 5
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "front": "Differentiate between Real DOM and Virtual DOM.",
+      "back": "Virtual DOM updates are faster but do not directly update the HTML",
+      "deckId": 1
+    },
+    {
+      "id": 2,
+      "front": "How do you modify the state of a different React component?",
+      "back": "Not at all! State is visible to the component only.",
+      "deckId": 1
+    },
+    {
+      "id": 3,
+      "front": "How do you pass data 'down' to a React child component?",
+      "back": "As properties or props",
+      "deckId": 1
+    },
+    {
+      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
+      "back": "All paths. A route with no path matches all URL's",
+      "deckId": 2,
+      "id": 4
+    },
+    {
+      "front": "What does <Switch> do?",
+      "back": "Renders the first matching child <Route> ",
+      "deckId": 2,
+      "id": 5
+    },
+    {
+      "cards": [],
+      "front": "b",
+      "back": "b",
+      "deckId": 1,
+      "id": 7
+    },
+    {
+      "front": "a",
+      "back": "a",
+      "deckId": 2,
+      "id": 10
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "deckId": "1",
+      "id": 11
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "deckId": "1",
+      "id": 12
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "deckId": "1",
+      "id": 13
+    },
+    {
+      "deckId": "1",
+      "id": 14
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "deckId": "1",
+      "id": 15
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "deckId": "1",
+      "id": 16
+    },
+    {
+      "deckId": "3",
+      "id": 17
+    },
+    {
+      "front": "ass",
+      "back": "ass",
+      "deckId": "3",
+      "id": 18
+    },
+    {
+      "front": "a",
+      "back": "a",
+      "deckId": "3",
+      "id": 19
+    },
+    {
+      "front": "ad",
+      "back": "ad",
+      "deckId": "3",
+      "id": 20
+    },
+    {
+      "front": "ad",
+      "back": "ad",
+      "deckId": "3",
+      "id": 21
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "deckId": "3",
+      "id": 22
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": "3",
+      "id": 23
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "deckId": "3",
+      "id": 24
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "deckId": "3",
+      "id": 25
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "deckId": "3",
+      "id": 26
+    },
+    {
+      "front": "aa",
+      "back": "aa",
+      "deckId": "3",
+      "id": 27
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "deckId": "3",
+      "id": 28
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "deckId": "3",
+      "id": 29
+    },
+    {
+      "front": "bc",
+      "back": "bc",
+      "deckId": "3",
+      "id": 31
+    },
+    {
+      "front": "cd",
+      "back": "cd",
+      "deckId": "3",
+      "id": 32
+    },
+    {
+      "front": "d",
+      "back": "d",
+      "deckId": "3",
+      "id": 33
+    },
+    {
+      "front": "bc",
+      "back": "cc",
+      "id": 34
+    },
+    {
+      "front": "",
+      "back": "",
+      "id": 35
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "id": 36
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "id": 37
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "id": 38
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "id": 39
+    },
+    {
+      "front": "abc",
+      "back": "abc",
+      "id": 40
+    },
+    {
+      "front": "bc",
+      "back": "bc",
+      "id": 41
+    },
+    {
+      "front": "ab",
+      "back": "b",
+      "id": 42
+    },
+    {
+      "front": "bd",
+      "back": "cd",
+      "id": 43
+    },
+    {
+      "front": "da",
+      "back": "a",
+      "id": 44
+    },
+    {
+      "front": "as",
+      "back": "as",
+      "id": 45
+    },
+    {
+      "front": "a",
+      "back": "a",
+      "deckId": 4,
+      "id": 46
+    },
+    {
+      "front": "b",
+      "back": "b",
+      "deckId": 5,
+      "id": 47
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "id": 48
+    },
+    {
+      "front": "ba",
+      "back": "ba",
+      "id": 49
+    },
+    {
+      "front": "a",
+      "back": "a",
+      "deckId": 3,
+      "id": 50
+    }
+  ]
+}
