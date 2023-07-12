@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import { readDeck } from "../utils/api";
-import CardStudy from "./CardStudy";
+import { readDeck } from "../../utils/api";
+import CardStudy from "../Card/CardStudy";
 
 function DeckStudy() {
     const deckId = useParams().deckId;

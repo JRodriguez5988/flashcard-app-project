@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { updateDeck, readDeck } from "../utils/api";
+import { updateDeck, readDeck } from "../../utils/api";
 import { Link, useParams, useHistory } from "react-router-dom";
 
 

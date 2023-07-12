@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route, Link } from "react-router-dom"
-import CreateDeck from "./DeckCreate";
-import DeckView from "./DeckView";
+import CreateDeck from "./Deck/DeckCreate";
+import DeckView from "./Deck/DeckView";
 import { listDecks } from "../utils/api";
 
 function Home() {

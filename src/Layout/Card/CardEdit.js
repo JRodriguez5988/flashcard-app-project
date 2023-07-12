@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
-import { readDeck, readCard, updateCard } from "../utils/api";
+import { readDeck, readCard, updateCard } from "../../utils/api";
 
 function CardEdit({editCard}) {
     const history = useHistory();

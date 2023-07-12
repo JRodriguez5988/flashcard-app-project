@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Switch, Route, useHistory } from "react-router-dom";
 import Deck from "./Deck";
-import { deleteDeck } from "../utils/api";
+import { deleteDeck } from "../../utils/api";
 
 function DeckView({deck, deleteDeckById}) {
     const history = useHistory()
