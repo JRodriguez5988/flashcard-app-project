@@ -4,6 +4,7 @@ import { readDeck, readCard, updateCard } from "../utils/api";
 
 function CardEdit({editCard}) {
     const history = useHistory();
+    console.log(useParams());
     const deckId = useParams().deck;
     const cardId = useParams().cardId;
 
@@ -11,17 +12,27 @@ function CardEdit({editCard}) {
     const [card, setCard] = useState({});
 
     useEffect(() => {
-        readDeck(deckId).then(result => setDeck(result));
+        async function read() {
+            const deckFromApi = await readDeck(deckId);
+            setDeck(deckFromApi);
+        };
+        read();
     }, [deckId]);
 
+
     useEffect(() => {
-        readCard(cardId).then(result => setCard(result));
+        async function read() {
+            const cardFromApi = await readCard(cardId);
+            setCard(cardFromApi);
+        };
+        read();
     }, [cardId]);
     
     const initialFormState = {
-        front: "",
-        back: "",
+        front: card.front,
+        back: card.back,
         id: cardId,
+        deckId: deckId,
     };
 
     const [formData, setFormData] = useState(initialFormState);
@@ -34,8 +45,11 @@ function CardEdit({editCard}) {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        formData.deckId = parseInt(formData.deckId, 10);
         const updatedCard = await updateCard(formData);
-        editCard(updatedCard);
+        const updatedCards = editCard(updatedCard);
+        const newDeck = {...deck, cards: updatedCards};
+        setDeck(newDeck);
         history.push(`/decks/${deckId}`);
     };
 
@@ -74,7 +88,7 @@ function CardEdit({editCard}) {
                 defaultValue={card.back}
                 />
                 <Link to={`/decks/${deckId}`} style={{marginRight: "5px"}} type="button" className="btn btn-secondary">Cancel</Link>
-                <Link to={`/decks/${deckId}`} type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</Link>
+                <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</button>
             </form>
         </section>
         </>

@@ -59,7 +59,7 @@ function CreateDeck() {
             placeholder="Enter a description"
             />
             <br/>
-        <Link to="/" type="button" className="btn btn-secondary" >Cancel</Link>
+        <Link to="/" type="button" className="btn btn-secondary" style={{marginRight: "5px"}}>Cancel</Link>
         <Link to="/" className="btn btn-primary"  type="submit" onClick={handleSubmit}>Submit</Link>
         </form>
         </section>

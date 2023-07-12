@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { readDeck, updateDeck } from "../utils/api";
+import { updateDeck, readDeck } from "../utils/api";
 import { Link, useParams, useHistory } from "react-router-dom";
 
 
@@ -10,12 +10,16 @@ function DeckEdit({editDeck}) {
     const [deck, setDeck] = useState({});
 
     useEffect(() => {
-        readDeck(deckId).then(result => setDeck(result))
+        async function read() {
+            const deckFromApi = await readDeck(deckId);
+            setDeck(deckFromApi);
+        };
+        read();
     }, [deckId]);
 
     const initialFormState = {
-        name: "",
-        description: "",
+        name: deck.name,
+        description: deck.description,
         id: deckId,
     };
 
@@ -25,12 +29,12 @@ function DeckEdit({editDeck}) {
         const value = target.value;
         const newFormData = {...formData, [target.name]: value};
         setFormData(newFormData);
-        console.log(formData);
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         const newDeck = await updateDeck(formData);
+        setDeck(newDeck);
         editDeck(newDeck);
         history.push(`/decks/${deckId}`)
     };
@@ -41,10 +45,11 @@ function DeckEdit({editDeck}) {
             <ol className="breadcrumb">
                 <li className="breadcrumb-item"><a href="/">Home</a></li>
                 <li className="breadcrumb-item"><a href={`/decks/${deckId}`}>{deck.name}</a></li>
-                <li className="breadcrumb-item active" aria-current="page">Edit</li>
+                <li className="breadcrumb-item active" aria-current="page">Edit Deck</li>
             </ol>
         </nav>
-        <section className="container">
+        <section>
+            <h3>Edit Deck</h3>
             <form>
                 <label htmlFor="name">Name</label>
                 <br/>
@@ -52,6 +57,7 @@ function DeckEdit({editDeck}) {
                 name="name"
                 type="text"
                 id="name"
+                key={deck.name}
                 value={formData.name}
                 onChange={handleChange}
                 defaultValue={deck.name}

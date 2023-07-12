@@ -19,17 +19,24 @@ function DeckView({deck, deleteDeckById}) {
         <>
         <div className="card">
             <div className="card-body">
-                <h2>{deck.name}</h2>
+                <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+                    <h2>{deck.name}</h2>
+                    <p>{deck.cards.length} cards</p>
+                </div>
                 <p>{deck.description}</p>
-                <Link to={`/decks/${deck.id}`} style={{marginRight: "5px"}} type="button" className="btn btn-secondary">View</Link>
-                <button style={{marginLeft: "5px", marginRight: "5px"}} type="button" className="btn btn-primary">Study</button>
-                <Link to="/" type="button" style={{marginLeft: "425px"}} className="btn btn-danger" onClick={handleDelete}>Delete</Link>
+                <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+                    <div>
+                        <Link to={`/decks/${deck.id}`} style={{marginRight: "5px"}} type="button" className="btn btn-secondary">View</Link>
+                        <Link to={`/decks/${deck.id}/study`} style={{marginLeft: "5px", marginRight: "5px"}} type="button" className="btn btn-primary">Study</Link>
+                    </div>
+                <Link to="/" type="button" style={{textAlign: "right"}} className="btn btn-danger" onClick={handleDelete}>Delete</Link>
+                </div>
             </div>           
 
         </div>
         <Switch>
             <Route path={`/decks/${deck.id}`}>
-                <Deck deckId={deck.id} handleDelete={() => handleDelete}/>
+                <Deck />
             </Route>
         </Switch>
             

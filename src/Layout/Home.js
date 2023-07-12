@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route, Link } from "react-router-dom"
-import CreateDeck from "./CreateDeck";
+import CreateDeck from "./DeckCreate";
 import DeckView from "./DeckView";
 import { listDecks } from "../utils/api";
 

@@ -1,9 +1,9 @@
 {
   "decks": [
     {
-      "id": 1,
       "name": "Rendering in React",
-      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation.",
+      "id": 1
     },
     {
       "name": "React Router",
@@ -11,19 +11,14 @@
       "id": 2
     },
     {
-      "name": "b",
-      "description": "b",
+      "name": "Hello!",
+      "description": "Hello!",
       "id": 3
     },
     {
-      "name": "aa",
-      "description": "aa",
+      "name": "A",
+      "description": "A",
       "id": 4
-    },
-    {
-      "name": "c",
-      "description": "c",
-      "id": 5
     }
   ],
   "cards": [
@@ -73,218 +68,161 @@
     {
       "front": "ab",
       "back": "ab",
-      "deckId": "1",
       "id": 11
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "deckId": "1",
-      "id": 12
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "deckId": "1",
-      "id": 13
-    },
-    {
-      "deckId": "1",
-      "id": 14
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "deckId": "1",
-      "id": 15
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "deckId": "1",
-      "id": 16
-    },
-    {
-      "deckId": "3",
-      "id": 17
-    },
-    {
-      "front": "ass",
-      "back": "ass",
-      "deckId": "3",
-      "id": 18
-    },
-    {
-      "front": "a",
-      "back": "a",
-      "deckId": "3",
-      "id": 19
-    },
-    {
-      "front": "ad",
-      "back": "ad",
-      "deckId": "3",
-      "id": 20
-    },
-    {
-      "front": "ad",
-      "back": "ad",
-      "deckId": "3",
-      "id": 21
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "deckId": "3",
-      "id": 22
-    },
-    {
-      "front": "",
-      "back": "",
-      "deckId": "3",
-      "id": 23
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "deckId": "3",
-      "id": 24
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "deckId": "3",
-      "id": 25
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "deckId": "3",
-      "id": 26
-    },
-    {
-      "front": "aa",
-      "back": "aa",
-      "deckId": "3",
-      "id": 27
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "deckId": "3",
-      "id": 28
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "deckId": "3",
-      "id": 29
-    },
-    {
-      "front": "bc",
-      "back": "bc",
-      "deckId": "3",
-      "id": 31
-    },
-    {
-      "front": "cd",
-      "back": "cd",
-      "deckId": "3",
-      "id": 32
-    },
-    {
-      "front": "d",
-      "back": "d",
-      "deckId": "3",
-      "id": 33
-    },
-    {
-      "front": "bc",
-      "back": "cc",
-      "id": 34
-    },
-    {
-      "front": "",
-      "back": "",
-      "id": 35
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "id": 36
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "id": 37
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "id": 38
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "id": 39
-    },
-    {
-      "front": "abc",
-      "back": "abc",
-      "id": 40
-    },
-    {
-      "front": "bc",
-      "back": "bc",
-      "id": 41
-    },
-    {
-      "front": "ab",
-      "back": "b",
-      "id": 42
-    },
-    {
-      "front": "bd",
-      "back": "cd",
-      "id": 43
-    },
-    {
-      "front": "da",
-      "back": "a",
-      "id": 44
-    },
-    {
-      "front": "as",
-      "back": "as",
-      "id": 45
-    },
-    {
-      "front": "a",
-      "back": "a",
-      "deckId": 4,
-      "id": 46
-    },
-    {
-      "front": "b",
-      "back": "b",
-      "deckId": 5,
-      "id": 47
-    },
-    {
-      "front": "ab",
-      "back": "ab",
-      "id": 48
     },
     {
       "front": "ba",
       "back": "ba",
-      "id": 49
+      "id": 12
     },
     {
-      "front": "a",
-      "back": "a",
+      "front": "ca",
+      "back": "ca",
+      "id": 13,
+      "deckId": "3"
+    },
+    {
+      "front": "ab",
+      "back": "ab",
+      "id": 15
+    },
+    {
+      "front": "frontd",
+      "back": "backd",
+      "id": 16
+    },
+    {
+      "front": "cf",
+      "back": "cf",
+      "id": 17
+    },
+    {
+      "front": "d front d",
+      "back": "d back d",
+      "id": 18,
+      "deckId": "3"
+    },
+    {
+      "front": "cs",
+      "back": "cs",
+      "id": 19,
+      "deckId": "3"
+    },
+    {
+      "front": "front",
+      "back": "back",
       "deckId": 3,
-      "id": 50
+      "id": 20
+    },
+    {
+      "front": "Bye!",
+      "back": "Bye!",
+      "id": 21,
+      "deckId": "3"
+    },
+    {
+      "front": "hello",
+      "id": 22
+    },
+    {
+      "front": "13",
+      "back": "24",
+      "id": 23,
+      "deckId": "3"
+    },
+    {
+      "front": "31",
+      "back": "14",
+      "id": 24,
+      "deckId": "3"
+    },
+    {
+      "front": "7",
+      "back": "8",
+      "id": 25,
+      "deckId": "3"
+    },
+    {
+      "front": "13",
+      "back": "24",
+      "id": 26,
+      "deckId": "3"
+    },
+    {
+      "front": "35",
+      "back": "46",
+      "id": 27,
+      "deckId": "3"
+    },
+    {
+      "front": "57",
+      "back": "68",
+      "id": 28,
+      "deckId": "3"
+    },
+    {
+      "front": "13",
+      "back": "23",
+      "id": 29,
+      "deckId": 3
+    },
+    {
+      "front": "hello",
+      "id": 30
+    },
+    {
+      "front": "5d",
+      "back": "6d",
+      "id": 31,
+      "deckId": "3"
+    },
+    {
+      "front": "1",
+      "back": "2",
+      "deckId": 4,
+      "id": 32
+    },
+    {
+      "front": "3",
+      "back": "4",
+      "deckId": 4,
+      "id": 33
+    },
+    {
+      "front": "57",
+      "back": "68",
+      "id": 34,
+      "deckId": "4"
+    },
+    {
+      "front": "57",
+      "back": "68",
+      "id": 35,
+      "deckId": "4"
+    },
+    {
+      "front": "57",
+      "back": "68",
+      "id": 36,
+      "deckId": "4"
+    },
+    {
+      "front": "57",
+      "back": "68",
+      "id": 37,
+      "deckId": "4"
+    },
+    {
+      "front": "5",
+      "back": "6",
+      "deckId": 4,
+      "id": 38
+    },
+    {
+      "front": "Alright!",
+      "back": "Woohoo!",
+      "id": 39,
+      "deckId": 3
     }
   ]
 }

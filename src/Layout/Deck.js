@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link, Switch, Route } from "react-router-dom";
-import { readDeck } from "../utils/api";
+import { useParams, Link, Switch, Route, useHistory } from "react-router-dom";
+import { readDeck, deleteDeck } from "../utils/api";
 import CardList from "./CardList";
 import DeckEdit from "./DeckEdit";
 import CardAdd from "./CardAdd";
 import NotFound from "./NotFound";
 import CardEdit from "./CardEdit";
+import DeckStudy from "./DeckStudy";
 
-function Deck({handleDelete}) {
+function Deck() {
+    const history = useHistory();
     const [deck, setDeck] = useState({});
     const [cards, setCards] = useState([]);
 
     const deckId = useParams().deckId;
 
     useEffect(() => {
-        readDeck(deckId).then(result => {
-            setDeck(result);
-        });
+        async function read() {
+            const deckFromApi = await readDeck(deckId);
+            setDeck(deckFromApi);
+        }
+        read();
     }, [deckId]);
 
     useEffect(() => {
@@ -44,13 +48,18 @@ function Deck({handleDelete}) {
 
     const editCard = (updatedCard) => {
         const index = cards.findIndex(card => card.id === updatedCard.id);
-        cards[index].front = updatedCard.front;
-        cards[index].back = updatedCard.back;
-        setCards(cards);
-        const updatedDeck = {...deck, cards: cards};
-        setDeck(updatedDeck);
+        const newCards = cards.splice(index, 1, updatedCard);
+        setCards(newCards);
+        return cards
     };
 
+    const handleDelete = async (event) => {
+        event.preventDefault();
+        if (window.confirm("Delete this deck? You will not be able to recover it.")) {
+            await deleteDeck(deckId);
+            history.push("/");
+        };
+    };
 
     return (
         <>
@@ -65,10 +74,14 @@ function Deck({handleDelete}) {
                 <div>
                     <h2>{deck.name}</h2>
                     <p>{deck.description}</p>
-                    <Link to={`/decks/${deckId}/edit`} style={{marginRight: "5px"}} type="button" className="btn btn-secondary">Edit</Link>
-                    <button style={{marginLeft: "5px", marginRight: "5px"}} type="button" className="btn btn-primary">Study</button>
-                    <Link to={`/decks/${deckId}/cards/new`} style={{marginLeft: "5px", marginRight: "5px"}} type="button" className="btn btn-primary">+ Add Cards</Link>
-                    <button style={{marginLeft: "350px"}} type="button" className="btn btn-danger" onClick={handleDelete}>Delete</button>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+                        <div>
+                            <Link to={`/decks/${deckId}/edit`} style={{marginRight: "5px"}} type="button" className="btn btn-secondary">Edit</Link>
+                            <Link to={`/decks/${deckId}/study`} style={{marginLeft: "5px", marginRight: "5px"}} type="button" className="btn btn-primary">Study</Link>
+                            <Link to={`/decks/${deckId}/cards/new`} style={{marginLeft: "5px", marginRight: "5px"}} type="button" className="btn btn-primary">+ Add Cards</Link>
+                        </div>
+                        <button style={{marginLeft: "350px"}} type="button" className="btn btn-danger" onClick={handleDelete}>Delete</button>
+                    </div>
                 </div>
                 <CardList deck={deck} deleteCardById={deleteCardById} />
             </Route>
@@ -80,6 +93,9 @@ function Deck({handleDelete}) {
             </Route>
             <Route path="/decks/:deck/cards/:cardId/edit">
                 <CardEdit editCard={editCard} />
+            </Route>
+            <Route path="/decks/:deckId/study">
+                <DeckStudy />
             </Route>
             <Route>
                 <NotFound />

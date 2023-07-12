@@ -7,7 +7,11 @@ function CardAdd({addCard}) {
     const [deck, setDeck] = useState({})
 
     useEffect(() => {
-        readDeck(deckId).then(result => setDeck(result))
+        async function read() {
+            const deckFromApi = await readDeck(deckId);
+            setDeck(deckFromApi);
+        }
+        read();
     }, [deckId]);
 
     const initialFormState = {
