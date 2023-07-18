@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
 import { readDeck, readCard, updateCard } from "../../utils/api";
+import CardForm from "./CardForm";
 
 function CardEdit({editCard}) {
     const history = useHistory();
-    console.log(useParams());
     const deckId = useParams().deck;
     const cardId = useParams().cardId;
 
@@ -37,12 +37,6 @@ function CardEdit({editCard}) {
 
     const [formData, setFormData] = useState(initialFormState);
 
-    const handleChange = ({target}) => {
-        const value = target.value;
-        const newFormData = {...formData, [target.name]: value}
-        setFormData(newFormData);
-    };
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         formData.deckId = parseInt(formData.deckId, 10);
@@ -66,27 +60,7 @@ function CardEdit({editCard}) {
         <h5>Edit Card</h5>
         <section>
             <form>
-                <label htmlFor="front">Front</label>
-                <textarea
-                name="front"
-                id="front"
-                type="text"
-                value={formData.front}
-                onChange={handleChange}
-                style={{width: "100%"}}
-                defaultValue={card.front}
-                />
-                <br/>
-                <label htmlFor="back">Back</label>
-                <textarea
-                name="back"
-                id="back"
-                type="text"
-                value={formData.back}
-                onChange={handleChange}
-                style={{width: "100%"}}
-                defaultValue={card.back}
-                />
+                <CardForm formData={formData} setFormData={setFormData} card={card}/>
                 <Link to={`/decks/${deckId}`} style={{marginRight: "5px"}} type="button" className="btn btn-secondary">Cancel</Link>
                 <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</button>
             </form>

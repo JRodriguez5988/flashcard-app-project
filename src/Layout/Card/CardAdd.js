@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { createCard, readDeck } from "../../utils/api";
+import CardForm from "./CardForm";
 
 function CardAdd({addCard}) {
     const deckId = useParams().deckId;
@@ -21,12 +22,6 @@ function CardAdd({addCard}) {
 
     const [formData, setFormData] = useState(initialFormState)
 
-    const handleChange = ({target}) => {
-        const value = target.value;
-        const newFormData = {...formData, [target.name]: value};
-        setFormData(newFormData);
-    };
-
     const handleSave = async (event) => {
         event.preventDefault();
         const newCard = await createCard(deckId, formData);
@@ -46,33 +41,14 @@ function CardAdd({addCard}) {
         <h5>{deck.name} : Add Card</h5>
         <section>
             <form onSubmit={handleSave}>
-                <label htmlFor="front">Front</label>
-                <textarea
-                name="front"
-                id="front"
-                type="text"
-                value={formData.front}
-                onChange={handleChange}
-                style={{width: "100%"}}
-                placeholder="Front side of card"
-                />
-                <br/>
-                <label htmlFor="back">Back</label>
-                <textarea
-                name="back"
-                id="back"
-                type="text"
-                value={formData.back}
-                onChange={handleChange}
-                style={{width: "100%"}}
-                placeholder="Back side of card"
-                />
-                <Link to={`/decks/${deckId}`} style={{marginRight: "5px"}} type="button" className="btn btn-secondary">Done</Link>
-                <button type="submit" className="btn btn-primary">Save</button>
+            <CardForm formData={formData} setFormData={setFormData}/>
+            <Link to={`/decks/${deckId}`} style={{marginRight: "5px"}} type="button" className="btn btn-secondary">Done</Link>
+            <button type="submit" className="btn btn-primary">Save</button>
             </form>
         </section>
         </>
-        )
+
+    )
 };
 
 export default CardAdd;

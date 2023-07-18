@@ -9,16 +9,6 @@
       "name": "React Router",
       "description": "React Router is a collection of navigational components that compose declaratively with your application.",
       "id": 2
-    },
-    {
-      "name": "Hello!",
-      "description": "Hello!",
-      "id": 3
-    },
-    {
-      "name": "A",
-      "description": "A",
-      "id": 4
     }
   ],
   "cards": [
@@ -60,12 +50,6 @@
       "id": 7
     },
     {
-      "front": "a",
-      "back": "a",
-      "deckId": 2,
-      "id": 10
-    },
-    {
       "front": "ab",
       "back": "ab",
       "id": 11
@@ -74,12 +58,6 @@
       "front": "ba",
       "back": "ba",
       "id": 12
-    },
-    {
-      "front": "ca",
-      "back": "ca",
-      "id": 13,
-      "deckId": "3"
     },
     {
       "front": "ab",
@@ -97,132 +75,12 @@
       "id": 17
     },
     {
-      "front": "d front d",
-      "back": "d back d",
-      "id": 18,
-      "deckId": "3"
-    },
-    {
-      "front": "cs",
-      "back": "cs",
-      "id": 19,
-      "deckId": "3"
-    },
-    {
-      "front": "front",
-      "back": "back",
-      "deckId": 3,
-      "id": 20
-    },
-    {
-      "front": "Bye!",
-      "back": "Bye!",
-      "id": 21,
-      "deckId": "3"
-    },
-    {
       "front": "hello",
       "id": 22
     },
     {
-      "front": "13",
-      "back": "24",
-      "id": 23,
-      "deckId": "3"
-    },
-    {
-      "front": "31",
-      "back": "14",
-      "id": 24,
-      "deckId": "3"
-    },
-    {
-      "front": "7",
-      "back": "8",
-      "id": 25,
-      "deckId": "3"
-    },
-    {
-      "front": "13",
-      "back": "24",
-      "id": 26,
-      "deckId": "3"
-    },
-    {
-      "front": "35",
-      "back": "46",
-      "id": 27,
-      "deckId": "3"
-    },
-    {
-      "front": "57",
-      "back": "68",
-      "id": 28,
-      "deckId": "3"
-    },
-    {
-      "front": "13",
-      "back": "23",
-      "id": 29,
-      "deckId": 3
-    },
-    {
       "front": "hello",
       "id": 30
-    },
-    {
-      "front": "5d",
-      "back": "6d",
-      "id": 31,
-      "deckId": "3"
-    },
-    {
-      "front": "1",
-      "back": "2",
-      "deckId": 4,
-      "id": 32
-    },
-    {
-      "front": "3",
-      "back": "4",
-      "deckId": 4,
-      "id": 33
-    },
-    {
-      "front": "57",
-      "back": "68",
-      "id": 34,
-      "deckId": "4"
-    },
-    {
-      "front": "57",
-      "back": "68",
-      "id": 35,
-      "deckId": "4"
-    },
-    {
-      "front": "57",
-      "back": "68",
-      "id": 36,
-      "deckId": "4"
-    },
-    {
-      "front": "57",
-      "back": "68",
-      "id": 37,
-      "deckId": "4"
-    },
-    {
-      "front": "5",
-      "back": "6",
-      "deckId": 4,
-      "id": 38
-    },
-    {
-      "front": "Alright!",
-      "back": "Woohoo!",
-      "id": 39,
-      "deckId": 3
     }
   ]
 }
